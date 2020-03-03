@@ -11,6 +11,25 @@ body, #root {
   min-height: 100%;
   background: transparent;
 }
+
+.showBox {
+  display: none;
+}
+
+.forumBox td, th {
+  text-align: left;
+  padding-right: 20%;
+  padding: 10px;
+}
+
+.editB:hover {
+  cursor: pointer;
+}
+
+.editB {
+  border: none;
+  background: none;
+}
 .App {
   margin: 1em auto;
   width: 95%;

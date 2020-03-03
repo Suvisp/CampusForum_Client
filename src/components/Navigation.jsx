@@ -24,7 +24,7 @@ export default class Navigation extends Component {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey={3} as={Link} to='/extra'>
-                List
+                Extraa
               </Nav.Link>
             </Nav.Item>
           </Nav>
