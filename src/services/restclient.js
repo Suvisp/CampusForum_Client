@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-const dataURL = '/api/postaus';
+const dataURL = 'http://localhost:3000/api/postaus';
 
 let getAll = async () => {
     let result = await Axios.get(dataURL)
