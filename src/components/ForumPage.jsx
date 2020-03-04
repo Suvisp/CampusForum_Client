@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import ForumForm from './ForumForm';
 import ForumList from './ForumList';
 import { getAll, addNew, editPost } from '../services/restclient';
+import Like from '../components/Like';
 
 export default class ForumPage extends Component {
     state = {
@@ -39,6 +40,7 @@ export default class ForumPage extends Component {
             } 
     }
 
+    
     render() {
         return (
             <div>

@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import Like from './Like'
 
 export default class ForumContent extends Component {
 
@@ -55,6 +56,7 @@ export default class ForumContent extends Component {
                     <td>{post_content}</td>
                     <td><input type="button" value="📝" className="editB" onClick={this.editState}></input></td>
                     {/* <td><input type="checkbox" value="delete" onClick={this.deleteArray} /></td> */}
+                    <Like/>
                 </tr>
                 {editBox}
             </Fragment>
