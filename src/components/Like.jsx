@@ -14,7 +14,7 @@ class Like extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.incrementMe}>❤️ {this.state.count}</button> 
+                <span onClick={this.incrementMe} role="img" aria-label="Heart">❤️ {this.state.count}</span> 
             </div>
         );
     }
