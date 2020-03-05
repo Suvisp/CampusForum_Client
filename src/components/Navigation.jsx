@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav'
 import NavbarBrand from 'react-bootstrap/NavbarBrand'
 
 export default class Navigation extends Component {
-  render () {
+  render() {
     return (
       <Navbar fixed='top' expand='sm' collapseOnSelect bg='dark' variant='dark'>
         <NavbarBrand>Campus Forum</NavbarBrand>
