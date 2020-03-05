@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom';
 import Like from './Like'
+import { IoIosTrash } from "react-icons/io";
 
 export default class ForumContent extends Component {
     link = "";
@@ -23,7 +24,8 @@ export default class ForumContent extends Component {
                     <td>{this.props.post.post_content}</td>
                     {/* <td><input type="button" value="📝" className="editB" onClick={this.updatePost} /></td> */}
                     <td><Link to={this.link}>Edit</Link></td>
-                    <td><input type="button" value="delete" onClick={this.removePost} /></td>
+                    <td><span onClick={this.removePost} ><IoIosTrash/></span></td>
+                    {/* <td><input type="button" value="delete" onClick={this.removePost} /></td> */}
                     <td><Like/></td>
                 </tr>
             </Fragment>

@@ -48,7 +48,6 @@ export default class ForumEdit extends Component {
                 <input name="pPostContent" value={this.state.post_contents.post_content} onChange={this.postcontentChange} />
                 <br></br>
                 <input type="button" value="Submit" onClick={this.update} />
-                {/* <button onClick={this.update}>Update</button> */}
             </div>
         )
     }
