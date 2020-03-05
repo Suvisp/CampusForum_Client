@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 // import './App.css';
-
 import ForumForm from './ForumForm';
 import ForumList from './ForumList';
 import { getAll, addNew, deletePost } from '../services/restclient';
