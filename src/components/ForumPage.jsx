@@ -11,6 +11,7 @@ export default class ForumPage extends Component {
         post_id: 0,
         post_nametag: '',
         post_content: '',
+        post_count: 0,
         post_contents: []
     };
 
