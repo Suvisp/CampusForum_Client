@@ -15,6 +15,7 @@ body {
 
 .meme > img {
     width: 60%;
+    min-width:350px;
 }
 
 .meme > h2 {
@@ -52,14 +53,16 @@ body {
 
 .meme-form {
     width: 50%;
-    margin: 10px auto;
+    min-width: 100px;
+    margin: 30px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .meme-form > input {
     width: 45%;
     height: 40px;
+    min-width: 150px;
 }
 
 .meme-form > button {
@@ -72,22 +75,23 @@ body {
 }
 
 .meme-form > input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-family: VT323, monospace;
+ 
   font-size: 25px;
-  text-align: cen
+  text-align: center;
 }
 .meme-form > input::-moz-placeholder { /* Firefox 19+ */
   font-family: VT323, monospace;
   font-size: 25px;
-  text-align: cen
+  text-align: center;
 }
 .meme-form > input:-ms-input-placeholder { /* IE 10+ */
   font-family: VT323, monospace;
   font-size: 25px;
-  text-align: cen
+  text-align: center;
 }
 .meme-form > input:-moz-placeholder { /* Firefox 18- */
   font-family: VT323, monospace;
   font-size: 25px;
-  text-align: cen
+  text-align: center;
+
 }
