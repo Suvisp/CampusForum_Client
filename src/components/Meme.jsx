@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Memes.css';
 
 export default class Meme extends Component {
+    // Meme generaatori
     constructor() {
         super()
         this.state = {

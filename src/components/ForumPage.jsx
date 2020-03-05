@@ -28,9 +28,10 @@ export default class ForumPage extends Component {
     }
 
     newPost = (p) => {
-        addNew(p, () => {
+        addNew(p)
+            .then((res) => {
             this.updateView();
-        })
+        });
     }
 
     removePost = (del_id) => {

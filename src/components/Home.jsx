@@ -2,7 +2,7 @@ import React from 'react'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import { Tab } from 'react-bootstrap'
 import SideBar from './SideBar';
-import { HashLink as Link } from 'react-router-hash-link';
+// import { HashLink as Link } from 'react-router-hash-link';
 // import { HashLink as Link } from 'react-router-hash-link';
 
 export const Home = () => {
