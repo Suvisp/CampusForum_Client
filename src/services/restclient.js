@@ -1,39 +1,39 @@
 import Axios from 'axios';
 
-const dataURL = 'http://localhost:3000/api/postaus';
-
 let getAll = async () => {
-    let result = await Axios.get(dataURL)
+    let result = await Axios.get('http://localhost:3000/api/postaus')
     // return result.data;
-    return result;
+    return result.data;
 }
-
-// let addNew = async (p) => {
-//     let newOne = await Axios.post(dataURL, {
-//         post_nametag: p.post_nametag,
-//         post_content: p.post_content })
-//     return newOne;
-// }
 
 let addNew = async (p) => {
-    let newOne = await Axios.post(dataURL, p)
-    return newOne.data;
+    let newOne = await Axios.post('http://localhost:3000/api/postaus', p)
+    return newOne;
+    // return newOne.data;
 }
 
-// let deleteOne = async (id) => {
-//     let delOne = await Axios.delete(`/api/quotes/${id}`, {
-//     })
-//     return delOne;
-// }
+let deletePost = async (id) => {
+    let delOne = await Axios.delete('http://localhost:3000/api/postaus/' + id, {
+    })
+    return delOne;
+}
 
 let editPost = async (id, p) => {
-    let edited = await Axios.put(dataURL + id, p)
-    return edited.data;
+    let edited = await Axios.put('http://localhost:3000/api/postaus/' + id, p)
+    // return edited.data;
+    return edited;
 }
+
+// let editPost = async (id, post_nametag, post_content) => {
+//     let edited = await Axios.put('http://localhost:3000/api/postaus/' + id, {
+//         post_nametag: post_nametag,
+//         post_content: post_content
+//     })
+//     return edited
+// }
 
 let editLike = async (id, p) => {
     let edited = await Axios.put(dataURL + id, p)
     return edited.data;
-}
 
-export { getAll, addNew, editPost, editLike }
+export { getAll, addNew, deletePost, editPost, editLike }
