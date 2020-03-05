@@ -6,6 +6,12 @@ let getAll = async () => {
     return result.data;
 }
 
+let getOne = async (id) => {
+    let getPost = await Axios.get('http://localhost:3000/api/postaus/' + id, {
+    })
+    return getPost;
+}
+
 let addNew = async (p) => {
     let newOne = await Axios.post('http://localhost:3000/api/postaus', p)
     return newOne;
@@ -21,7 +27,7 @@ let deletePost = async (id) => {
 let editPost = async (id, p) => {
     let edited = await Axios.put('http://localhost:3000/api/postaus/' + id, p)
     // return edited.data;
-    return edited;
+    return edited.data;
 }
 
 // let editPost = async (id, post_nametag, post_content) => {
@@ -37,4 +43,4 @@ let editLike = async (id, p) => {
     return edited.data;
 }
 
-export { getAll, addNew, deletePost, editPost, editLike }
+export { getAll, getOne, addNew, deletePost, editPost, editLike }

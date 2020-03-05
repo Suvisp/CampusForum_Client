@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 import ForumForm from './ForumForm';
 import ForumList from './ForumList';
-import { getAll, addNew, editPost, deletePost } from '../services/restclient';
+import { getAll, addNew, deletePost } from '../services/restclient';
 // import Like from '../components/Like';
 
 export default class ForumPage extends Component {
@@ -33,17 +33,6 @@ export default class ForumPage extends Component {
         })
     }
 
-    // updatePost = async (p) => {
-    //     const { post_contents } = this.state
-    //     for (let j = 0; j < post_contents.length; j++) {
-    //         if (post_contents[j].post_id === p.post_id) {
-    //             await this.setState({ post_id: post_contents[j].post_id, post_nametag: p.post_nametag, post_content: p.post_content });
-    //             await editPost(this.state.post_id, this.state.post_nametag, this.state.post_content);
-    //         }
-    //         this.updateView();
-    //     }
-    // }
-
     removePost = (del_id) => {
         deletePost(del_id)
             .then((response) => {
@@ -51,13 +40,12 @@ export default class ForumPage extends Component {
             });
     }
 
-    
     render() {
         return (
             <div>
                 < ForumForm newPost={this.newPost} />
                 <br /><br />
-                < ForumList post_contents={this.state.post_contents} updatePost={this.updatePost} removePost={this.removePost} />
+                < ForumList post_contents={this.state.post_contents} removePost={this.removePost} />
             </div>
         )
     }
