@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import './App.css';
 import { Home } from './components/Home';
 import ForumPage from './components/ForumPage';
+import ForumEdit from './components/ForumEdit'
 import Extra from './components/Extra';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <Switch>
       <Route path="/" exact component={Home}/>
       <Route path="/forumPage" exact component={ForumPage}/>
-      {/* <Route path="/forumEdit" exact component={ForumEdit}/> */}
+      <Route path="/forumEdit/:id" exact component={ForumEdit}/>
       <Route path="/extra" exact component={Extra}/>
       </Switch>
       </div>
