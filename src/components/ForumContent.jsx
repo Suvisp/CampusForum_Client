@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import Like from './Like'
 
 export default class ForumContent extends Component {
 

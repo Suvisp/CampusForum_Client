@@ -32,4 +32,8 @@ let editPost = async (id, p) => {
 //     return edited
 // }
 
-export { getAll, addNew, deletePost, editPost }
+let editLike = async (id, p) => {
+    let edited = await Axios.put(dataURL + id, p)
+    return edited.data;
+
+export { getAll, addNew, deletePost, editPost, editLike }
