@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom';
-// import Like from './Like'
+import Like from './Like'
 
 export default class ForumContent extends Component {
     link = "";
