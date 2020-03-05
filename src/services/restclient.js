@@ -33,7 +33,8 @@ let editPost = async (id, p) => {
 // }
 
 let editLike = async (id, p) => {
-    let edited = await Axios.put(dataURL + id, p)
+    let edited = await Axios.put('http://localhost:3000/api/postaus/' + id, p)
     return edited.data;
+}
 
 export { getAll, addNew, deletePost, editPost, editLike }

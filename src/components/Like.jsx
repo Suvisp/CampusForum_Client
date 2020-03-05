@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Like extends Component {
     state = {
-        post_count: 0
+        count: 0
     }
     incrementMe = () => {
         let newCount = this.state.count + 1

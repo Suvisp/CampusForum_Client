@@ -29,6 +29,7 @@ export default class ForumContent extends Component {
                     <td>{this.props.post.post_content}</td>
                     <td><input type="button" value="📝" className="editB" onClick={this.updatePost} /></td>
                     <td><input type="button" value="delete" onClick={this.removePost} /></td>
+                    <Like/>
                 </tr>
             </Fragment>
 
