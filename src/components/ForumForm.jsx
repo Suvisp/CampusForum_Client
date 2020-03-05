@@ -1,16 +1,11 @@
 import React, { Component } from 'react'
-// import Form from 'react-bootstrap/Form'
-// import Button from 'react-bootstrap/Button'
-// import { Row, Col } from 'react-bootstrap'
 
 export default class ForumForm extends Component {
     state = {
         post_nametag: '',
         post_content: '',
         post_id: 0,
-        // post_contents: []
     }
-    //tarviiko olla tässä taulukko []?
 
     nametagChange = (ev) => {
         this.setState({ post_nametag: ev.target.value });
