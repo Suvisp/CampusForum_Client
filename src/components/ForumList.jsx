@@ -14,7 +14,7 @@ export default class ForumList extends Component {
             <table className="list">
                 <thead>
                     <tr>
-                        <th>Nametag</th><th>Post</th><th>Edit</th><th>Delete</th>
+                        <th>Nametag</th><th>Post</th><th>Edit</th><th>Delete</th><th></th>
                     </tr>
                 </thead>
                 <tbody>
