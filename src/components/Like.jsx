@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 class Like extends Component {
     state = {
         count: 0

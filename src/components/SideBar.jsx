@@ -21,12 +21,6 @@ export default class SideBar extends Component {
             styles.color = "#D90000"
         }
 
-        // const styles = {
-        //     color: "#FF8C00", 
-        //     backgroundColor: "#FF2D00",
-        //     fontSize: 24
-        //   }
-
         return (
             <div>
                 <h1 style={styles}>Good {timeOfDay}!</h1>

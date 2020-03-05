@@ -8,7 +8,7 @@ export default class ForumContent extends Component {
     link = "";
     constructor(props) {
         super(props);
-        this.link = "/forumEdit/" + props.post.post_id;
+        this.link = "/forumEdit/" + this.props.post.post_id;
         this.state = {
         }
     }
