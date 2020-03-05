@@ -3,14 +3,14 @@ import React, { Component } from 'react'
 
 import ForumForm from './ForumForm';
 import ForumList from './ForumList';
-import { getAll, addNew, editPost } from '../services/restclient';
-import Like from '../components/Like';
+import { getAll, addNew, editPost, deletePost } from '../services/restclient';
+// import Like from '../components/Like';
 
 export default class ForumPage extends Component {
     state = {
         post_id: 0,
-        post_nametag: "",
-        post_content: "", 
+        post_nametag: '',
+        post_content: '',
         post_contents: []
     };
 
@@ -18,26 +18,37 @@ export default class ForumPage extends Component {
         this.updateView();
     }
 
-    updateView = async () => {
-        let data = await getAll();
-        this.setState({ post_contents: data.data })
+    updateView() {
+        getAll().then(post_contents => {
+            this.setState({ post_contents });
+        }).catch(err => {
+            console.error("Virhe kiinni", err);
+            this.setState({ error: err.message })
+        });
     }
 
-    newPost = async (p) => {
-        await this.setState({ post_nametag: p.post_nametag, post_content:p.post_content });
-        await addNew(this.state)
-        this.updateView();
-
+    newPost = (p) => {
+        addNew(p, () => {
+            this.updateView();
+        })
     }
-    editPost = async (p) => {
-        const {post_contents} = this.state
-            for (let j = 0; j < post_contents.length; j++) {
-                if (post_contents[j].post_id === p.post_id) {
-                    await this.setState({post_id: post_contents[j].post_id, post_nametag: p.post_nametag, post_content: p.post_content });
-                    await editPost(this.state.post_id, this.state.post_nametag, this.state.post_content);
-                }
+
+    // updatePost = async (p) => {
+    //     const { post_contents } = this.state
+    //     for (let j = 0; j < post_contents.length; j++) {
+    //         if (post_contents[j].post_id === p.post_id) {
+    //             await this.setState({ post_id: post_contents[j].post_id, post_nametag: p.post_nametag, post_content: p.post_content });
+    //             await editPost(this.state.post_id, this.state.post_nametag, this.state.post_content);
+    //         }
+    //         this.updateView();
+    //     }
+    // }
+
+    removePost = (del_id) => {
+        deletePost(del_id)
+            .then((response) => {
                 this.updateView();
-            } 
+            });
     }
 
     
@@ -46,7 +57,7 @@ export default class ForumPage extends Component {
             <div>
                 < ForumForm newPost={this.newPost} />
                 <br /><br />
-                < ForumList post_contents={this.state.post_contents} editPost={this.editPost} />
+                < ForumList post_contents={this.state.post_contents} updatePost={this.updatePost} removePost={this.removePost} />
             </div>
         )
     }

@@ -15,6 +15,7 @@ function App() {
       <Switch>
       <Route path="/" exact component={Home}/>
       <Route path="/forumPage" exact component={ForumPage}/>
+      {/* <Route path="/forumEdit" exact component={ForumEdit}/> */}
       <Route path="/extra" exact component={Extra}/>
       </Switch>
       </div>
