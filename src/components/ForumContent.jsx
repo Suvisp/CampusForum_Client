@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom';
-// import Like from './Like'
+import Like from './Like'
 
 export default class ForumContent extends Component {
     link = "";
@@ -24,7 +24,7 @@ export default class ForumContent extends Component {
                     {/* <td><input type="button" value="📝" className="editB" onClick={this.updatePost} /></td> */}
                     <td><Link to={this.link}>Edit</Link></td>
                     <td><input type="button" value="delete" onClick={this.removePost} /></td>
-                    <Like/>
+                    <td><Like/></td>
                 </tr>
             </Fragment>
 
