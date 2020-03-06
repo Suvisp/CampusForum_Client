@@ -62,7 +62,7 @@ export default class Spotify extends Component {
           {!this.state.token && (
             <a
               className="spotbtn spotbtn--loginSpotify-spotlink"
-              href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+              href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}/%23/spotify&scope=${scopes.join(
                 "%20"
               )}&response_type=token&show_dialog=true`}
             >
