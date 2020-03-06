@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 // import './App.css';
-
 import ForumForm from './ForumForm';
 import ForumList from './ForumList';
 import { getAll, addNew, deletePost } from '../services/restclient';
@@ -12,6 +11,7 @@ export default class ForumPage extends Component {
         post_id: 0,
         post_nametag: '',
         post_content: '',
+        post_count: 0,
         post_contents: []
     };
 

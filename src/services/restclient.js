@@ -24,7 +24,6 @@ let deletePost = async (id) => {
 
 let editPost = async (id, p) => {
     let edited = await Axios.put('http://localhost:3000/api/postaus/' + id, p)
-    // return edited.data;
     return edited;
 }
 
