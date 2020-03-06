@@ -16,12 +16,12 @@ export const Home = () => {
 
 
       <Weather/>
-      <Jumbotron>
+      <Jumbotron className="Jumbotron">
         <h1>Welcome to the Campus Forum ™</h1>
       </Jumbotron>
 
       <div>
-        <Tab.Container id='list-group-tabs-mods' defaultActiveKey='#link1'>
+        <Tab.Container className="Good" id='list-group-tabs-mods' defaultActiveKey='#link1'>
             <SideBar />
         </Tab.Container>
       </div>
