@@ -4,18 +4,18 @@ import { Tab } from 'react-bootstrap'
 import SideBar from './SideBar';
 // import { HashLink as Link } from 'react-router-hash-link';
 // import { HashLink as Link } from 'react-router-hash-link';
-
+import cupncube from '../cupncube.jpg'
 export const Home = () => {
   return (
       
     <div className='Home'>
      
-      <Jumbotron>
+      <Jumbotron className="Jumbotron">
         <h1>Welcome to the Campus Forum ™</h1>
-        <a class="weatherwidget-io" href="https://forecast7.com/en/60d2124d66/espoo/" data-label_1="ESPOO" data-label_2="WEATHER" data-theme="original" >Check the weather in Keilaniemi &#x2600; &#9928;</a>
       </Jumbotron>
+      {/* <img className="cupncube" src={cupncube}/> */}
       
-      
+      {/* <h1>Welcome to the Campus Forum ™</h1> */}
       <div>
         <Tab.Container id='list-group-tabs-mods' defaultActiveKey='#link1'>
 
