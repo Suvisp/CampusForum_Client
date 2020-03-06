@@ -50,6 +50,7 @@ body, #root {
 
 .Home .jumbotron {
   color: black;
+  
 }
 
 .linkspan {
@@ -89,7 +90,8 @@ a, .link {
   opacity:0.8;
 }
 
-.Home{
+.Home {
+  
   
 }
 
@@ -133,4 +135,25 @@ a, .link {
   justify-content: center;
   width:95%;
   text-align:center;
+}
+
+.cupncube{
+  margin-top: 50px;
+  display:center;
+
+  width:95%;
+  text-align:center;
+ 
+}
+
+.Jumbotron {
+  max-height: 100px;
+
+
+  /* color: black;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px ;
+  font-family: Arial, Helvetica, sans-serif */
+
 }
