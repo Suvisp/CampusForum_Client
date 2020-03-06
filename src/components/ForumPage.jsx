@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 // import './App.css';
-
 import ForumForm from './ForumForm';
 import ForumList from './ForumList';
 import { getAll, addNew, deletePost } from '../services/restclient';
 // import Like from '../components/Like';
+import logo from '../cup.png';
 
 export default class ForumPage extends Component {
     state = {
@@ -29,9 +29,10 @@ export default class ForumPage extends Component {
     }
 
     newPost = (p) => {
-        addNew(p, () => {
+        addNew(p)
+            .then((res) => {
             this.updateView();
-        })
+        });
     }
 
     removePost = (del_id) => {
@@ -44,6 +45,9 @@ export default class ForumPage extends Component {
     render() {
         return (
             <div>
+                <div className="cuppycup">
+                    <img src={logo} className="App-logo" alt="logo" />
+                </div>
                 < ForumForm newPost={this.newPost} />
                 <br /><br />
                 < ForumList post_contents={this.state.post_contents} removePost={this.removePost} />

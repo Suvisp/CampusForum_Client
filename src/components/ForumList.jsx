@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
-// import { Forum } from './ForumForm'
-// import { Table } from 'react-bootstrap'
 import ForumContent from './ForumContent'
 
 export default class ForumList extends Component {
 
     render() {
-        //self=this;
         var allposts = this.props.post_contents.map((p, ind) => {
             return (<ForumContent post_id={p.post_id} key={p.post_id} post={p} removePost={this.props.removePost} />)
         })
@@ -14,7 +11,7 @@ export default class ForumList extends Component {
             <table className="list">
                 <thead>
                     <tr>
-                        <th>Nametag</th><th>Post</th><th>Edit</th><th>Delete</th>
+                        <th>Nametag</th><th>Post</th><th>Edit</th><th>Delete</th><th></th>
                     </tr>
                 </thead>
                 <tbody>

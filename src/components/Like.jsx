@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 class Like extends Component {
     state = {
         count: 0
@@ -14,7 +13,7 @@ class Like extends Component {
     render() {
         return (
             <div>
-                <span onClick={this.incrementMe} role="img" aria-label="Heart">❤️ {this.state.count}</span>
+                <span onClick={this.incrementMe} role="img" aria-label="Heart">❤️ {this.state.count}</span> 
             </div>
         );
     }

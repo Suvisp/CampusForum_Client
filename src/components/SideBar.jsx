@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 export default class SideBar extends Component {
+    // Tämä koodi tervehtii kellonajan mukaan Good morning/evening/night!
     render() {
         const date = new Date()
         const hours = date.getHours()
@@ -12,19 +13,13 @@ export default class SideBar extends Component {
         if (hours < 12) {
             timeOfDay = "morning"
             styles.color = "#04756F"
-        } else if (hours >= 12 && hours < 17) {
+        } else if (hours >= 12 && hours < 18) {
             timeOfDay = "afternoon"
             styles.color = "#2E0927"
         } else {
             timeOfDay = "night"
             styles.color = "#D90000"
         }
-
-        // const styles = {
-        //     color: "#FF8C00", 
-        //     backgroundColor: "#FF2D00",
-        //     fontSize: 24
-        //   }
 
         return (
             <div>
