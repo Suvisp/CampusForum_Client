@@ -8,7 +8,7 @@ let getAll = async () => {
 let getOne = async (id) => {
     let getPost = await Axios.get('http://localhost:3000/api/postaus/' + id, {
     })
-    return getPost;
+    return getPost.data;
 }
 
 let addNew = async (p) => {

@@ -27,6 +27,11 @@ export default class Navigation extends Component {
                 Meme Generator
               </Nav.Link>
             </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey={4} as={Link} to='/spotify'>
+                Spotify
+              </Nav.Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
