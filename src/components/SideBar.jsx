@@ -15,7 +15,7 @@ export default class SideBar extends Component {
             styles.color = "#04756F"
         } else if (hours >= 12 && hours < 18) {
             timeOfDay = "afternoon"
-            styles.color = "#2E0927"
+            styles.color = "#FFFFFF"
         } else {
             timeOfDay = "night"
             styles.color = "#D90000"

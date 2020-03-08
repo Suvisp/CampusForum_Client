@@ -2,10 +2,12 @@ html {
   background-color: rgb(0, 0, 0) !important;
   min-height: 100%;
   background: url('images/accube.jpg') no-repeat center;
+  text-shadow:3px 3px 3px 3px black !important;
 }
 
 body {
   min-width: 390px;
+  text-shadow:3px 3px 3px 3px black;
 }
 
 body, #root {
@@ -21,6 +23,7 @@ body, #root {
   text-align: left;
   padding-right: 20%;
   padding: 10px;
+  text-shadow:3px 3px 3px 3px black;
   
 }
 
@@ -39,17 +42,18 @@ body, #root {
 }
 
 .Content {
-  margin: 60pt auto;  
+  margin: 80pt auto;  
   width: 100%;
   border: 4pt solid lightgray;
   padding: 1em;
   color: lightgray;
-  background-color: rgb(70, 179, 119);
+  background-color:rgba(56, 163, 104, 0.7);
   opacity:0.9;
 }
 
 .Home .jumbotron {
   color: black;
+  
 }
 
 .linkspan {
@@ -89,13 +93,14 @@ a, .link {
   opacity:0.8;
 }
 
-.Home{
+.Home {
+  
   
 }
 
 .forumBox{
   box-shadow: 5 5 5 5 black;
-  background-color: rgb(64, 82, 75);
+  background-color: rgb(64, 82, 75,0.9);
   
 }
 
@@ -133,4 +138,25 @@ a, .link {
   justify-content: center;
   width:95%;
   text-align:center;
+
+.cupncube{
+  margin-top: 50px;
+  display:center;
+
+  width:95%;
+  text-align:center;
+ 
+}
+
+.Jumbotron {
+  max-height: 100px;
+
+
+
+  /* color: black;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px ;
+  font-family: Arial, Helvetica, sans-serif */
+
 }
