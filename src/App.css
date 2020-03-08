@@ -93,11 +93,6 @@ a, .link {
   opacity:0.8;
 }
 
-.Home {
-  
-  
-}
-
 .forumBox{
   box-shadow: 5 5 5 5 black;
   background-color: rgb(64, 82, 75,0.9);
@@ -138,7 +133,7 @@ a, .link {
   justify-content: center;
   width:95%;
   text-align:center;
-
+}
 .cupncube{
   margin-top: 50px;
   display:center;
